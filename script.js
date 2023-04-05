@@ -1,68 +1,83 @@
-console.log('test');
-
-/* "Step 3: Your game is going to play against the computer, so begin with a function called getComputerChoice that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’."" */
+/* "Step 3: Your game is going to play against the computer, so begin with a function called getComputerChoice that will randomly return ‘Rock’, ‘Paper’ or ‘Scissors’."" */
 
 function getComputerChoice(){
     const options = ["Rock", "Paper", "Scissors"];
     const random = Math.floor(Math.random() * options.length);
     return options[random];
 }
-console.log(getComputerChoice());
+// test
+console.log("This tests getComputerChoice(): " + getComputerChoice());
 
 // * * * // 
 
 /* Step 4-5: 
 Write a function that plays a single round of Rock Paper Scissors. 
+* * *
+ function playRound only needs to play 1 round of RPS.
 
-The function should take two parameters - the playerSelection and computerSelection - 
-* and then return a string that declares the winner of the round like so: "You Lose! Paper beats Rock"
+ playerSelection = the player choosing rock, paper, or scissors
+* remember to make this case insensitive (revisit later)
 
-* Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation). 
+computerSelection = computer's choice, maybe it pulls from getComputerChoice?
 
-Important note: you want to return the results of this function call, not console.log() them. You’re going to use what you return later on, so let’s test this function by using console.log to see the results:*/
-// Sample code provided by TOP 
-/*
-function playRound(playerSelection, computerSelection){
- 
-}
-const playerSelection = "rock"
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection))
-*/
+playRound will compare the values of both arguments
+the results will be as if speaking to the user, not the computer
 
-// * * * //
-
-/*
-
-working through the steps: 
-
-define playerSelection where user input should be "rock/paper/scissors"
-- for the correct input, make sure its case insensitive.
+it needs to keep score as well
+tie = 0 (can apply to both)
+win = 1 (will have to be applied to each argument)
 
 */
+// score variables
+let playerScore = 0;
+let computerScore = 0;
 
-// where we left off: let's make this barebones before making it into a function. sleep on that
-
+// keeps returning as undefined intermittently
 function playRound(playerSelection, computerSelection) {
-    let userInput = prompt("Rock, Paper, or Scissors?");
-    // Changes any input to only capitalize the first letter
-    
-    playerSelection = userInput.toLowerCase().charAt(0).toUpperCase() + userInput.slice(1);
-    // attempting to do all of this in a function
-    if (userInput === "rock") {
-        playerSelection = 1;
-    } else if (userInput === "paper") {
-        playerSelection = 2;
-    } else if (userInput === "scissors") {
-        playerSelection = 3;
+    if (playerSelection === computerSelection) {
+        return ("It's a tie!");
+        // Rock section of if/else
+    } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "Scissors") {
+        console.log("You win! Rock beats Scissors.");
+        return playerScore = playerScore + 1;
+    } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "Paper"){
+        console.log("You lose! Paper beats Rock.");
+        return computerScore = computerScore + 1;
+        
+        // Paper section of if/else
+    } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "Rock") {
+        console.log("You win! Paper beats Rock.");
+        return playerScore = playerScore + 1;
+    } else if (playerSelection.toLowerCase() === "paper" && computerSelection === "Scissors") {
+        console.log("You lose! Scissors beats Paper.");
+        return computerScore = computerScore + 1;
+        
+     // Scissors section of if/else
+    } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "Paper") {
+        console.log("You win! Scissors beats Paper.");
+        return playerScore = playerScore + 1;
+    } else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "Rock") {
+        console.log("You lose! Rock beats Scissors.");
+        return computerScore = computerScore + 1;
+    // Closing else
     } else {
-        alert("You did something wrong here!")
+        console.log("Wow! Something is wrong!");
     };
-    console.log(userInput);
-}
+}; 
+  // the real command  
+//   let playerSelection = prompt("Choose your fighter")
+  // temp command
+  const playerSelection = "rock";
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection, computerSelection));
+  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
 
 
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+
+
+
+/*      ***This might solve the case-insensitivity problem. revisit***
+    playerSelection = userInput.toLowerCase().charAt(0).toUpperCase() + userInput.slice(1);
+   
+ */
