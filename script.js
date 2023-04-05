@@ -29,18 +29,40 @@ const playerSelection = "rock"
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection))
 */
+
 // * * * //
+
 /*
 
 working through the steps: 
 
-define playerSelection which will take the users input 
-
-input should be "rock/paper/scissors"
-
-- make it somehow restricted to those three inputs (maybe an if/else statement 
-that specifies it won't take anything other than RPS input)
+define playerSelection where user input should be "rock/paper/scissors"
 - for the correct input, make sure its case insensitive.
 
 */
 
+// where we left off: let's make this barebones before making it into a function. sleep on that
+
+function playRound(playerSelection, computerSelection) {
+    let userInput = prompt("Rock, Paper, or Scissors?");
+    // Changes any input to only capitalize the first letter
+    
+    playerSelection = userInput.toLowerCase().charAt(0).toUpperCase() + userInput.slice(1);
+    // attempting to do all of this in a function
+    if (userInput === "rock") {
+        playerSelection = 1;
+    } else if (userInput === "paper") {
+        playerSelection = 2;
+    } else if (userInput === "scissors") {
+        playerSelection = 3;
+    } else {
+        alert("You did something wrong here!")
+    };
+    console.log(userInput);
+}
+
+
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
