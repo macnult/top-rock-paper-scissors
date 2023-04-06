@@ -44,4 +44,24 @@ function playRound(playerSelection, computerSelection) {
   console.log(playRound(playerSelection, computerSelection));
   console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
 
+// * * * //
+/*
 
+Still to-do: 
+* Write a new function called game()
+- game() will loop playRound 5 times (or you can just call playRound x5)
+// Maybe attempt the latter before going in to the former. read up on for/while
+
+* Remember to change playerSelection to a prompt() so that they can enter their own choice rather than it say "Rock" every time 
+
+* * * 
+
+playRound needs to store the score, then run again
+within the rules of game() should run 5 times
+// what if it's a tie tho? play again?
+// make the for/while run to best of 5, not just 5 times
+
+
+
+
+*/
