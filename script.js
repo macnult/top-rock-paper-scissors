@@ -13,6 +13,15 @@ console.log("This tests getComputerChoice(): " + getComputerChoice());
 
 /* Step 4-5: Write a function that plays a single round of Rock Paper Scissors.  */
 
+ // score variables
+  let playerScore = 0;
+  let computerScore = 0;
+  // temp command
+  const playerSelection = "Rock";
+  // Might Switch to this once the game() function is made: 
+  // let playerSelection = prompt("Choose your fighter")
+  const computerSelection = getComputerChoice();
+
 function playRound(playerSelection, computerSelection) {
   if (playerSelection == computerSelection) {
     return "It's a tie!";
@@ -21,25 +30,14 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection.toLowerCase() === "paper" && computerSelection === "Rock") ||
     (playerSelection.toLowerCase() === "scissors" && computerSelection === "Paper")
   ) {
-    playerScore++;
-    return `You win! ${playerSelection} beats ${computerSelection}.`;
+    console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
+    return playerScore++;
   } else {
-    computerScore++;
-    return `You lose! ${computerSelection} beats ${playerSelection}.`;
+    console.log(`You lose! ${computerSelection} beats ${playerSelection}.`);
+    return computerScore++; 
   }
 };
-  
  
-
-
-  // score variables
-  let playerScore = 0;
-  let computerScore = 0;
-  // temp command
-  const playerSelection = "Rock";
-  // Might Switch to this once the game() function is made: 
-  // let playerSelection = prompt("Choose your fighter")
-  const computerSelection = getComputerChoice();
   console.log(playRound(playerSelection, computerSelection));
   console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
 
