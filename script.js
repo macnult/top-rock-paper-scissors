@@ -13,15 +13,6 @@ console.log("This tests getComputerChoice(): " + getComputerChoice());
 
 /* Step 4-5: Write a function that plays a single round of Rock Paper Scissors.  */
 
- // score variables
-  let playerScore = 0;
-  let computerScore = 0;
-  // temp command
-  const playerSelection = "Rock";
-  // Might Switch to this once the game() function is made: 
-  // let playerSelection = prompt("Choose your fighter")
-  const computerSelection = getComputerChoice();
-
 function playRound(playerSelection, computerSelection) {
   if (playerSelection == computerSelection) {
     return "It's a tie!";
@@ -37,9 +28,44 @@ function playRound(playerSelection, computerSelection) {
     return computerScore++; 
   }
 };
+  
+  // score variables
+  let playerScore = 0;
+  let computerScore = 0;
  
+
+  // Might Switch to this once the game() function is made: 
+  // let playerSelection = prompt("Choose your fighter")
+  const playerSelection = "Rock";
+  const computerSelection = getComputerChoice();
+  console.log("* * * Round 1 * * *");
   console.log(playRound(playerSelection, computerSelection));
   console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+
+  // Lets try the hard code method to pull this 4 more times
+  const playerSelection2 = "Paper";
+  const computerSelection2 = getComputerChoice()
+  console.log("* * * Round 2 * * *");
+  console.log(playRound(playerSelection2, computerSelection2));
+  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+
+  const playerSelection3 = "Scissors";
+  const computerSelection3 = getComputerChoice()
+  console.log("* * * Round 3 * * *");
+  console.log(playRound(playerSelection3, computerSelection3));
+  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+
+  const playerSelection4 = "Rock";
+  const computerSelection4 = getComputerChoice();
+  console.log("* * * Round 4 * * *");
+  console.log(playRound(playerSelection4, computerSelection4));
+  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`)
+
+  const playerSelection5 = "Paper";
+  const computerSelection5 = getComputerChoice();
+  console.log("* * * Round 5 * * *");
+  console.log(playRound(playerSelection5, computerSelection5));
+  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`)
 
 // * * * //
 /*
@@ -84,6 +110,3 @@ try calling playerScore and computerScore, but how will you get it to save when 
 */
 // }
 
-function game(){
-    
-}
