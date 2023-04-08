@@ -36,11 +36,15 @@ function playRound(playerSelection, computerSelection) {
 
   // Might Switch to this once the game() function is made: 
   // let playerSelection = prompt("Choose your fighter")
+
+  // Note: The first run of this does not have any number at the end
   const playerSelection = "Rock";
   const computerSelection = getComputerChoice();
   console.log("* * * Round 1 * * *");
   console.log(playRound(playerSelection, computerSelection));
   console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+
+// * * * //
 
   // Lets try the hard code method to pull this 4 more times
   const playerSelection2 = "Paper";
@@ -67,6 +71,7 @@ function playRound(playerSelection, computerSelection) {
   console.log(playRound(playerSelection5, computerSelection5));
   console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`)
 
+
 // * * * //
 /*
 
@@ -77,36 +82,5 @@ Still to-do/Step 6:
 
 * Remember to change playerSelection to a prompt() so that they can enter their own choice rather than it say "Rock" every time 
 
-* * * 
-
-first things first: playRound needs to store the score, then run again
-within the rules of game() should run 5 times
-// what if it's a tie tho? play again?
-// make the for/while run to best of 5, not just 5 times 
-
 */
-// * * * //
-
-// make it run more than once: call it twice?
-// add it in to game() because i think that's how it's gonna work
-
-
-// function game(){
-/*
-run playRound
-store the score
-print 
-^ we already have this written out 
-
-* may be time to write something else here that will add on to it
-* this might be the meat of turning this from hard code to a loop
-// for now, make it just play another round, adding previous score with 
-// new score and printing it out
-
-lets name it playAgain
-playAgain will run playRound, but add from the last game
-
-try calling playerScore and computerScore, but how will you get it to save when it runs the function again?
-*/
-// }
 
