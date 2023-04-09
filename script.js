@@ -9,8 +9,6 @@ function getComputerChoice(){
 // test
 console.log("This tests getComputerChoice(): " + getComputerChoice());
 
-// * * * // 
-
 /* Step 4-5: Write a function that plays a single round of Rock Paper Scissors.  */
 
 function playRound(playerSelection, computerSelection) {
@@ -40,36 +38,44 @@ function playRound(playerSelection, computerSelection) {
   // Note: The first run of this does not have any number at the end
   const playerSelection = "Rock";
   const computerSelection = getComputerChoice();
-  console.log("* * * Round 1 * * *");
-  console.log(playRound(playerSelection, computerSelection));
-  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+  // console.log("* * * Round 1 * * *");
+  // console.log(playRound(playerSelection, computerSelection));
+  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+
+  function game(){
+    for (let i = 0; i < 5; i++) {
+      console.log(playRound(playerSelection, computerSelection));
+      console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+    }
+  }
+game();
 
 // * * * //
 
   // Lets try the hard code method to pull this 4 more times
-  const playerSelection2 = "Paper";
-  const computerSelection2 = getComputerChoice()
-  console.log("* * * Round 2 * * *");
-  console.log(playRound(playerSelection2, computerSelection2));
-  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+  // const playerSelection2 = "Paper";
+  // const computerSelection2 = getComputerChoice()
+  // console.log("* * * Round 2 * * *");
+  // console.log(playRound(playerSelection2, computerSelection2));
+  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
 
-  const playerSelection3 = "Scissors";
-  const computerSelection3 = getComputerChoice()
-  console.log("* * * Round 3 * * *");
-  console.log(playRound(playerSelection3, computerSelection3));
-  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+  // const playerSelection3 = "Scissors";
+  // const computerSelection3 = getComputerChoice()
+  // console.log("* * * Round 3 * * *");
+  // console.log(playRound(playerSelection3, computerSelection3));
+  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
 
-  const playerSelection4 = "Rock";
-  const computerSelection4 = getComputerChoice();
-  console.log("* * * Round 4 * * *");
-  console.log(playRound(playerSelection4, computerSelection4));
-  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`)
+  // const playerSelection4 = "Rock";
+  // const computerSelection4 = getComputerChoice();
+  // console.log("* * * Round 4 * * *");
+  // console.log(playRound(playerSelection4, computerSelection4));
+  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`)
 
-  const playerSelection5 = "Paper";
-  const computerSelection5 = getComputerChoice();
-  console.log("* * * Round 5 * * *");
-  console.log(playRound(playerSelection5, computerSelection5));
-  console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`)
+  // const playerSelection5 = "Paper";
+  // const computerSelection5 = getComputerChoice();
+  // console.log("* * * Round 5 * * *");
+  // console.log(playRound(playerSelection5, computerSelection5));
+  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`)
 
 
 // * * * //
