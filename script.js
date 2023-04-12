@@ -54,6 +54,8 @@ function playRound(playerSelection, computerSelection) {
 // remember to change i < 2 to i < 5 - shortened for debugging purposes
 function game(){
   for (let i = 0; i < 2; i++) {
+    // this was originally outside of the function
+    // may need to revise
     let playerSelection = getPlayerChoice();
     playerSelection = playerSelection.toLowerCase();
     computerSelection = getComputerChoice();
