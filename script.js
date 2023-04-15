@@ -7,7 +7,7 @@ function getComputerChoice() {
 function getPlayerChoice(){
   let choice = prompt("Rock, Paper, or Scissors?");
   if (choice === null) {
-    return alert("That's fine. When you're ready to play, click OK");
+    return alert("No worries. When you're ready to play, click OK");
   }
   choice = choice.toLowerCase();
   if ((choice === "rock") || (choice === "paper") || (choice === "scissors")){
