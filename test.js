@@ -36,9 +36,9 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
       return "It's a tie!";
     } else if (
-      (playerSelection === "rock" && computerSelection === "Scissors") ||
-      (playerSelection === "paper" && computerSelection === "Rock") ||
-      (playerSelection === "scissors" && computerSelection === "Paper")
+      (playerSelection === "rock" && computerSelection === "scissors") ||
+      (playerSelection === "paper" && computerSelection === "rock") ||
+      (playerSelection === "scissors" && computerSelection === "paper")
     ) {
       console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
       return playerScore++;

@@ -1,5 +1,5 @@
 function getComputerChoice() {
-  const options = ["Rock", "Paper", "Scissors"];
+  const options = ["rock", "paper", "scissors"];
   const random = Math.floor(Math.random() * options.length);
   return options[random];
 }
@@ -10,11 +10,15 @@ function getComputerChoice() {
 function getPlayerChoice(){
   let choice = prompt("Rock, Paper, or Scissors?");
   choice = choice.toLowerCase();
-  if ((choice === "Rock") || (choice == "Paper") || (choice === "Scissors")){
+  if ((choice === "rock") || (choice === "paper") || (choice === "scissors")){
     return choice;
   } else {
-    return alert("Whoops! Try again");
+    return alert("YOU HAVE BEEN DISQUALIFIED FOR NOT ENTERING A VALID OPTION");
   }
 }
-// getPlayerChoice tested successfully on single execution
+// getPlayerChoice() tested successfully on single executions
+// changes on multiple console.log tests
+
+let playerScore = 0;
+let computerScore = 0;
 
