@@ -3,9 +3,7 @@ function getComputerChoice() {
   const random = Math.floor(Math.random() * options.length);
   return options[random];
 }
-// getComputerChoice tested successfully on single execution
-// when defined as (computerSelection) it does not change,
-// but console.log(getComputerChoice()) twice in a row gives different results
+
 
 function getPlayerChoice(){
   let choice = prompt("Rock, Paper, or Scissors?");
@@ -16,9 +14,33 @@ function getPlayerChoice(){
     return alert("YOU HAVE BEEN DISQUALIFIED FOR NOT ENTERING A VALID OPTION");
   }
 }
-// getPlayerChoice() tested successfully on single executions
-// changes on multiple console.log tests
 
 let playerScore = 0;
 let computerScore = 0;
 
+function playRound(playerSelection, computerSelection) {
+  playerSelection = getPlayerChoice();
+  computerSelection = getComputerChoice();
+  if (playerSelection === computerSelection) {
+    console.log("It's a tie!");
+  } else if (
+    (playerSelection === "rock" && computerSelection === "scissors") ||
+    (playerSelection === "paper" && computerSelection === "rock") ||
+    (playerSelection === "scissors" && computerSelection === "paper")
+  ) {
+    console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
+    return playerScore++;
+  } else {
+    console.log(`You lose! ${computerSelection} beats ${playerSelection}.`);
+    return computerScore++; 
+  }
+};
+
+
+function game(){
+  for (let i = 0; i < 5; i++) {
+    console.log(playRound());
+    console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
+  }
+}
+game();
