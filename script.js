@@ -66,39 +66,3 @@ function game(){
 game();
     
 
-
-
-
-
-// * * * //
-  // Old hard code prior to making game()
-  // console.log("* * * Round 1 * * *");
-  // console.log(playRound(playerSelection, computerSelection));
-  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
-
-  // const playerSelection2 = "Paper";
-  // const computerSelection2 = getComputerChoice()
-  // console.log("* * * Round 2 * * *");
-  // console.log(playRound(playerSelection2, computerSelection2));
-  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
-
-  // const playerSelection3 = "Scissors";
-  // const computerSelection3 = getComputerChoice()
-  // console.log("* * * Round 3 * * *");
-  // console.log(playRound(playerSelection3, computerSelection3));
-  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
-
-  // const playerSelection4 = "Rock";
-  // const computerSelection4 = getComputerChoice();
-  // console.log("* * * Round 4 * * *");
-  // console.log(playRound(playerSelection4, computerSelection4));
-  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`)
-
-  // const playerSelection5 = "Paper";
-  // const computerSelection5 = getComputerChoice();
-  // console.log("* * * Round 5 * * *");
-  // console.log(playRound(playerSelection5, computerSelection5));
-  // console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`)
-// * * * //
-
-
