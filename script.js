@@ -4,9 +4,11 @@ function getComputerChoice() {
   return options[random];
 }
 
-
 function getPlayerChoice(){
   let choice = prompt("Rock, Paper, or Scissors?");
+  if (choice === null) {
+    return alert("That's fine. When you're ready to play, click OK");
+  }
   choice = choice.toLowerCase();
   if ((choice === "rock") || (choice === "paper") || (choice === "scissors")){
     return choice;
@@ -35,7 +37,6 @@ function playRound(playerSelection, computerSelection) {
     return computerScore++; 
   }
 };
-
 
 function game(){
   for (let i = 0; i < 5; i++) {
