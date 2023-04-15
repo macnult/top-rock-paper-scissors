@@ -10,13 +10,11 @@ function getComputerChoice() {
 function getPlayerChoice(){
   let choice = prompt("Rock, Paper, or Scissors?");
   choice = choice.toLowerCase();
-  if ((choice === "rock") || (choice === "paper") || (choice === "scissors")){
+  if ((choice === "Rock") || (choice == "Paper") || (choice === "Scissors")){
     return choice;
   } else {
     return alert("Whoops! Try again");
   }
 }
 // getPlayerChoice tested successfully on single execution
-// same thing as getComputerChoice where playerSelection returns the same result
-// might need to define these things within playRound
 
