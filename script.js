@@ -3,4 +3,15 @@ function getComputerChoice() {
   const random = Math.floor(Math.random() * options.length);
   return options[random];
 }
-// getComputerChoice tested successfully 
+// getComputerChoice tested successfully on single execution
+
+function getPlayerChoice(){
+  let choice = prompt("Rock, Paper, or Scissors?");
+  choice = choice.toLowerCase();
+  if ((choice === "rock") || (choice === "paper") || (choice === "scissors")){
+    return choice;
+  } else {
+    return alert("Whoops! Try again");
+  }
+}
+// getPlayerChoice tested successfully on single execution
