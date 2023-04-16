@@ -44,4 +44,4 @@ function game(){
     console.log(`The current score is Player: ${playerScore} Computer: ${computerScore}`);
   }
 }
-game();
+// game();
